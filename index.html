@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>PhoneValidator</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link">Products</a></li>
+                <li><a href="#" class="nav-link">Solutions</a></li>
+                <li><a href="#" class="nav-link">Partners</a></li>
+                <li><a href="#" class="nav-link">Learn more</a></li>
+                <li><a href="#" class="nav-link">Pricing</a></li>
+                <li><a href="#" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="nav-search">
+                <input type="text" placeholder="Search..." class="search-input">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <span class="hamburger-icon">☰</span>
+    </button>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <h3>Account</h3>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password">
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="btn btn--primary">Login</button>
+                    <button type="button" class="btn btn--secondary">Sign Up</button>
+                </div>
+            </form>
+            <div class="theme-toggle">
+                <label class="toggle-label">
+                    <span>Dark Mode</span>
+                    <input type="checkbox" id="themeToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Try our phone verification tool</h1>
+                    <p>Validate phone numbers instantly with our advanced verification system. Get detailed information about country, carrier, and line type.</p>
+                    
+                    <!-- Phone Validation Form -->
+                    <div class="validation-form" id="validationForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="countryCode" class="form-label">Country</label>
+                                <select id="countryCode" class="form-control country-select">
+                                    <option value="">Select Country</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNumber" class="form-label">Phone Number</label>
+                                <input type="tel" id="phoneNumber" class="form-control" placeholder="Enter phone number">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn--primary btn--lg validate-btn" id="validateBtn">
+                            Validate Phone Number
+                        </button>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div class="results-section" id="resultsSection" style="display: none;">
+                        <div class="results-content">
+                            <h3>Validation Results</h3>
+                            <div class="results-grid" id="resultsGrid">
+                                <!-- Results will be populated here -->
+                            </div>
+                            <button type="button" class="btn btn--secondary back-btn" id="backBtn">
+                                ← Back to Validation
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
